@@ -1,0 +1,51 @@
+# 开发模式, debug, release
+runMode: release
+#本地ip
+ip: 127.0.0.1
+# HTTP绑定端口
+addr: :9090
+# API Server的名字
+name: gb28181Panda
+# mysql配置信息
+mysql:
+  username: root
+  password: 123456
+  host: 127.0.0.1
+  port: 3306
+  name: gb28181_panda
+#  redis配置信息
+redis:
+  addr: 127.0.0.1:6379
+  password: 123456
+  dbIndex: 1
+#  ZLM的配置信息
+media:
+  # [必修修改] zlm服务器的唯一id
+  id: zlm_id
+  # [必须修改] zlm服务器的内网IP 如果是外网的话需要设置外网ip地址
+  ip: 127.0.0.1
+  # [必须修改] zlm服务器的http.port
+  httpPort: 80
+  # [可选] zlm服务器的secret
+  secret: 035c73f7-bb6b-4889-a715-d9eb2d1925cc
+  # rtsp的端口
+  rtspPort: 554
+  # rtmp的端口
+  rtmpPort: 1935
+# 28181 服务器的配置
+sip:
+  # [必须修改] 本机的IP
+  ip: "127.0.0.1"
+  # [可选] 28181服务监听的端口
+  port: 5060
+  # 根据国标6.1.2中规定，domain宜采用ID统一编码的前十位编码。国标附录D中定义前8位为中心编码（由省级、市级、区级、基层编号组成，参照GB/T 2260-2007）
+  # 后两位为行业编码，定义参照附录D.3
+  # 3701020049标识山东济南历下区 信息行业接入
+  realm: "3402000000"
+  id: "34020000002000000001"
+  # [可选] 默认设备认证密码，移除密码将不进行校验
+  password: "123456"
+  #  sip的头
+  userAgent: "gb28181Panda"
+  # 是否校验设备的域值 1 校验 0 不校验
+  checkRealm: 1
